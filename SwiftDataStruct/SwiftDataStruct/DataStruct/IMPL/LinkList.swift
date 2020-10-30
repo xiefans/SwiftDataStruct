@@ -73,6 +73,10 @@ struct LinkList<T: Equatable>: List {
         }
     }
     
+    mutating func delete(index: Int) {
+        
+    }
+    
     // MARK: - Private Mehtod
     private func findNode(e: T) -> (prefixNode: Node<T>, currentNode: Node<T>)? {
         var node = header.next

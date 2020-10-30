@@ -7,9 +7,9 @@
 
 import Cocoa
 
-struct ArrayList<T>: List {
+struct ArrayList<T: Equatable>: List {
     typealias `Type` = T
-    
+    var list: [T] = []
     func isEmpty() -> Bool {
         return list.isEmpty
     }
@@ -19,18 +19,26 @@ struct ArrayList<T>: List {
     }
     
     func find(e: T) -> Int {
-        return -1
+        return list.firstIndex(of: e) ?? NSNotFound
     }
     
     func find(index: Int) -> T? {
-        return nil
+        return list[index]
     }
     
     func findPrefix(e: T) -> T? {
+        let i = find(e: e)
+        if i != NSNotFound && i > 0{
+            return list[i - 1]
+        }
         return nil
     }
     
-    func delete(e: T) {
-        
+    mutating func delete(e: T) {
+        list.removeAll(where: {$0 == e})
+    }
+    
+    mutating func delete(index: Int) {
+        list.remove(at: index)
     }
 }
