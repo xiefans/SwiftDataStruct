@@ -1,16 +1,15 @@
 //
-//  LinkListTest.swift
+//  ArrayListTest.swift
 //  SwiftDataStructTests
 //
-//  Created by 谢帆 on 2020/10/25.
+//  Created by 谢帆 on 2020/10/31.
 //
 
 import XCTest
 @testable import SwiftDataStruct
 
-class LinkListTest: XCTestCase {
-    
-    var list = LinkList<Int>()
+class ArrayListTest: XCTestCase {
+    var list = ArrayList<Int>()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -99,4 +98,5 @@ class LinkListTest: XCTestCase {
         XCTAssert(list.find(e: 1) == NSNotFound)
         XCTAssert(list.size == 2)
     }
+
 }

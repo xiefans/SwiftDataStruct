@@ -15,6 +15,7 @@
 		9E0654A52545ADA4006C50CB /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0654A42545ADA4006C50CB /* List.swift */; };
 		9E0654AB2545ADCD006C50CB /* LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0654AA2545ADCD006C50CB /* LinkList.swift */; };
 		9E64D2B3254B0AAF00BA6392 /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E64D2B2254B0AAF00BA6392 /* ArrayList.swift */; };
+		9E64D2B7254D7DA600BA6392 /* ArrayListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E64D2B6254D7DA600BA6392 /* ArrayListTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		9E0654A42545ADA4006C50CB /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		9E0654AA2545ADCD006C50CB /* LinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList.swift; sourceTree = "<group>"; };
 		9E64D2B2254B0AAF00BA6392 /* ArrayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayList.swift; sourceTree = "<group>"; };
+		9E64D2B6254D7DA600BA6392 /* ArrayListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayListTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				9E0654A02545AD85006C50CB /* LinkListTest.swift */,
+				9E64D2B6254D7DA600BA6392 /* ArrayListTest.swift */,
 				9E0654792545AD03006C50CB /* Info.plist */,
 			);
 			path = SwiftDataStructTests;
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0654A12545AD85006C50CB /* LinkListTest.swift in Sources */,
+				9E64D2B7254D7DA600BA6392 /* ArrayListTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

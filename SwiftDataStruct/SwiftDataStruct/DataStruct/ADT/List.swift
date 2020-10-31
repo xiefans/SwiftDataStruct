@@ -9,6 +9,7 @@ import Cocoa
 
 protocol List {
     associatedtype `Type`
+    var size: UInt {get}
     func isEmpty() -> Bool
     mutating func add(e: Type)
     func find(e: Type) -> Int

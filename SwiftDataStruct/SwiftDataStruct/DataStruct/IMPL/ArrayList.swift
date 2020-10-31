@@ -10,6 +10,7 @@ import Cocoa
 struct ArrayList<T: Equatable>: List {
     typealias `Type` = T
     var list: [T] = []
+    var size: UInt { UInt(list.count) }
     func isEmpty() -> Bool {
         return list.isEmpty
     }
@@ -39,6 +40,8 @@ struct ArrayList<T: Equatable>: List {
     }
     
     mutating func delete(index: Int) {
-        list.remove(at: index)
+        if index < size && index >= 0 {
+            list.remove(at: index)
+        }
     }
 }
