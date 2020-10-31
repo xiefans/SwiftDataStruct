@@ -86,4 +86,23 @@ class LinkListTest: XCTestCase {
         XCTAssert(list.find(e: 1) == NSNotFound)
         XCTAssert(list.size == 2)
     }
+    
+    func testDeleteIndex() {
+        var list = LinkList<Int>()
+        list.add(e: 1)
+        list.add(e: 2)
+        list.add(e: 3)
+        list.add(e: 4)
+        XCTAssert(list.size == 4)
+        XCTAssert(list.find(index: 0) == 1)
+        list.delete(index: 0)
+        XCTAssert(list.find(index: 0) == 2)
+        list.delete(index: 100)
+        XCTAssert(list.find(index: 0) == 2)
+        list.delete(index: 2)
+        XCTAssert(list.find(e: 3) == 1)
+        XCTAssert(list.find(e: 2) == 0)
+        XCTAssert(list.find(e: 1) == NSNotFound)
+        XCTAssert(list.size == 2)
+    }
 }

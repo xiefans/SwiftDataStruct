@@ -74,7 +74,11 @@ struct LinkList<T: Equatable>: List {
     }
     
     mutating func delete(index: Int) {
-        
+        if let result = findNode(index: index) {
+            result.prefixNode.next = result.currentNode.next
+            result.currentNode.next = nil
+            size -= 1
+        }
     }
     
     // MARK: - Private Mehtod
@@ -85,6 +89,22 @@ struct LinkList<T: Equatable>: List {
             if n.data == e { return (prefixNode, n) }
             prefixNode = n
             node = n.next
+        }
+        return nil
+    }
+    
+    private func findNode(index: Int) -> (prefixNode: Node<T>, currentNode: Node<T>)? {
+        if index >= size {
+            return nil
+        }
+        var node = header.next
+        var prefixNode = header
+        var tempIndex = 0
+        while let n = node {
+            if index == tempIndex { return (prefixNode, n) }
+            prefixNode = n
+            node = n.next
+            tempIndex += 1
         }
         return nil
     }
