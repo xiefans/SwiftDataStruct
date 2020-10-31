@@ -81,6 +81,17 @@ struct LinkList<T: Equatable>: List {
         }
     }
     
+    mutating func insert(e: T, index: Int) {
+        if index == size {
+            self.add(e: e)
+        } else if let result = findNode(index: index) {
+            let node = Node(data: e)
+            result.prefixNode.next = node
+            node.next = result.currentNode
+            size += 1
+        }
+    }
+    
     // MARK: - Private Mehtod
     private func findNode(e: T) -> (prefixNode: Node<T>, currentNode: Node<T>)? {
         var node = header.next

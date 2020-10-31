@@ -99,4 +99,19 @@ class LinkListTest: XCTestCase {
         XCTAssert(list.find(e: 1) == NSNotFound)
         XCTAssert(list.size == 2)
     }
+    
+    func testInsert() {
+        list.add(e: 1)
+        list.add(e: 3)
+        list.insert(e: 2, index: 1)
+        list.insert(e: 12, index: 100)
+        list.insert(e: 4, index: 3)
+        XCTAssert(list.find(e: 2) == 1)
+        XCTAssert(list.find(e: 3) == 2)
+        XCTAssert(list.find(e: 1) == 0)
+        XCTAssert(list.find(e: 4) == 3)
+        XCTAssert(list.size == 4)
+        list.insert(e: 5, index: 0)
+        XCTAssert(list.find(e: 5) == 0)
+    }
 }

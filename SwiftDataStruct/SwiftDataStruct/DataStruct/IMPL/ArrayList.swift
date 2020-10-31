@@ -44,4 +44,10 @@ struct ArrayList<T: Equatable>: List {
             list.remove(at: index)
         }
     }
+    
+    mutating func insert(e: T, index: Int) {
+        if index >= 0 && index <= size {
+            list.insert(e, at: index)
+        }
+    }
 }

@@ -17,4 +17,5 @@ protocol List {
     func findPrefix(e: Type) -> Type?
     mutating func delete(e: Type)
     mutating func delete(index: Int)
+    mutating func insert(e: Type, index: Int)
 }
